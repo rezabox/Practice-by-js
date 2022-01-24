@@ -1,0 +1,108 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    font-family: 'Vazir';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider{
+    margin: 50 auto;
+    border:5px solid #04b68f80 ;
+    position: relative;
+    overflow: hidden;
+}
+.slider .items img{
+    animation: 1s zoom ease;
+}
+@keyframes zoom{
+      0%{
+          transform: scale(1.5);
+          opacity: 0;
+      }
+      100%{
+          transform: scale(1);
+          opacity: 1;
+      }
+}
+.items{
+    display: none;
+}
+.items.active{
+    display: block;
+}
+.slider .footer{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .controler{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    left: 5%;
+    width: 90%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.sidbar{
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    margin-left: -60%;
+    display: flex;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: gray;
+    transition: .75s all ease-out;
+}
+.sidbar.active{
+    margin-left: 0;
+}
+ .sidbar img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ul{
+    text-align: center;
+}
+li{
+    margin: 20px;
+    border-bottom:1px solid black ;
+    cursor: pointer;
+}
+li:hover{
+    color: white;
+}
+.btn{
+    position: absolute;
+    margin-top: -60%;
+    margin-left: -66%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    color: honeydew;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
